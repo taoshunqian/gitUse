@@ -1,0 +1,22 @@
+1. install git
+2.look install
+   git
+3.to configure git
+   git config --global user.name 'git is name'
+   git config --global user.email 'git is email'
+4.set up ssh key
+   ssh-keygen -t rsa -C ‘git is email’
+5.look .ssh/id_rsa.puh
+   open .ssh/id_rsa.pub
+6.command + c 
+   cat .ssh/id_rsa.pub
+7.get into GitHub is Settings
+   click New SSH key
+8.测试
+   ssh -T git@github.com
+
+
+
+1.git add '文件名'  （添加到暂时区） git add . (全部)
+2.git commit -m ‘note’ （添加到仓库区）
+3.git push （上传）
