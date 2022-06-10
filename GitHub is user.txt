@@ -10,22 +10,73 @@
 10.git checkout master 回到最新代码
 
 本地git和GitHub关联
-1.点击Git Base 
-2.输入 git config --global user.name 'git的名称'
-           git config --global user.email 'git的邮箱'
-3.生成ssh key
-   输入：ssh-keygen -t rsa -C 'git的邮箱' 
-4.复制ssh key
-   一般在c/Users/(本地)/.ssh/id_rsa.pub 文件的内容直接复制
-5.链接github
-   打开GitHub 点击头像里面的Settings --> SSH and GPS keys中点击添加ssh
-6.设置名字
-   title：随便
-   Key：在本地生成的ssh复制进去
-   点击 Add SSH key
-7.测试连接是否成功
-   输入：ssh -T git@github.com
-8.创建Git repository创建仓库
-9.本地关联GitHub
-   运行git remote add origin ‘ssh的地址’将仓库区的内容上传到GitHub上
-   然后输入git push -u origin master
+    1.点击Git Base
+    2.输入 git config --global user.name 'git的名称'
+               git config --global user.email 'git的邮箱'
+    3.生成ssh key
+       输入：ssh-keygen -t rsa -C 'git的邮箱'
+    4.复制ssh key
+       一般在c/Users/(本地)/.ssh/id_rsa.pub 文件的内容直接复制
+    5.链接github
+       打开GitHub 点击头像里面的Settings --> SSH and GPS keys中点击添加ssh
+    6.设置名字
+       title：随便
+       Key：在本地生成的ssh复制进去
+       点击 Add SSH key
+    7.测试连接是否成功
+       输入：ssh -T git@github.com
+    8.创建Git repository创建仓库
+
+    9.本地关联GitHub
+       运行git remote add origin ‘ssh的地址’将仓库区的内容上传到GitHub上
+       然后输入git push -u origin master
+
+分支操作
+
+一、 创建test分支提交步骤
+
+    1.列出所有分支
+      git branch -a
+
+    2.创建test分支
+      git branch test
+
+    3.切换到test分支:
+      git checkout test
+
+    4.添加add修改:
+      git add .
+
+    5.添加commit注释
+      git commit -m "第一次提交代码"
+
+    6.提交到服务器
+      git push origin test
+
+
+二、将test分支合并到master本地分支
+
+    1.创建test分支
+     git branch test
+
+    2.切换到test分支
+     git checkout test
+
+    3.在test分支添加一个readme.txt文件
+     touch readme.txt
+     git add readme.txt
+
+    4.提交commit本地文件
+     git commit -m “增加readme.txt”
+
+    5.切换到master分支
+     git checkout master
+
+    6.把test分支合并到master分支
+     git merge test
+
+    7.提交master分支到服务器
+     git push origin master
+
+    8.删除test分支
+     git branch -d test
