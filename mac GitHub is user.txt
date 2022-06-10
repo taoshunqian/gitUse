@@ -20,3 +20,54 @@
 1.git add '文件名'  （添加到暂时区） git add . (全部)
 2.git commit -m ‘note’ （添加到仓库区）
 3.git push （上传）
+
+
+分支操作
+
+一、 创建test分支提交步骤
+
+    1.列出所有分支
+      git branch -a
+
+    2.创建test分支
+      git branch test
+
+    3.切换到test分支:
+      git checkout test
+
+    4.添加add修改:
+      git add .
+
+    5.添加commit注释
+      git commit -m "第一次提交代码"
+
+    6.提交到服务器
+      git push origin test
+
+
+二、将test分支合并到master本地分支
+
+    1.创建test分支
+     git branch test
+
+    2.切换到test分支
+     git checkout test
+
+    3.在test分支添加一个readme.txt文件
+     touch readme.txt
+     git add readme.txt
+
+    4.提交commit本地文件
+     git commit -m “增加readme.txt”
+
+    5.切换到master分支
+     git checkout master
+
+    6.把test分支合并到master分支
+     git merge test
+
+    7.提交master分支到服务器
+     git push origin master
+
+    8.删除test分支
+     git branch -d test
