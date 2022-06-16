@@ -4,6 +4,11 @@
 4.git init初始化仓库
 5.git status 查看状态 如果中文文件名称出现乱码 输入 git config --global core。quotepath false （在没有上传到暂存区）
 6.git add ‘文件名’就可以上传到暂存区 （或者 git add -A 上传此目录下所有文件）
+ 1） git add -A .  一次添加所有改变的文件
+ 2)  git add -A    添加所有的内容
+ 3)  git add .     添加新文件和编辑过的文件不包括删除的文件
+ 4)  git add -u    添加编辑或者删除的文件，不包括新添加的文件
+ 
 7.git commit -m ‘更新的信息’将文件上传到（仓库区）
 8.git log 查看日志
 9.git checkout ‘版本的前7位’ 回到每一个历史版本
