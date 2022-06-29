@@ -1,4 +1,4 @@
-1.下载GitHub.exe文件然后安装
+﻿1.下载GitHub.exe文件然后安装
 2.在任意地方创建一个文件做为git的仓库
 3.在文件内部右击，使用Git Base Here进入命令行
 4.git init初始化仓库
@@ -13,6 +13,10 @@
 8.git log 查看日志
 9.git checkout ‘版本的前7位’ 回到每一个历史版本
 10.git checkout master 回到最新代码
+
+
+// error: src refspec master does not match any
+// 可以尝试重新执行git add指令
 
 本地git和GitHub关联
     1.点击Git Base
