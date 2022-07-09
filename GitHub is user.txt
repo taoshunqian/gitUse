@@ -1,4 +1,5 @@
-﻿1.下载GitHub.exe文件然后安装
+﻿
+1.下载GitHub.exe文件然后安装
 2.在任意地方创建一个文件做为git的仓库
 3.在文件内部右击，使用Git Base Here进入命令行
 4.git init初始化仓库
